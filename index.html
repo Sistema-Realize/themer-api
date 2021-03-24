@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="realize-menu"></div>
+    <div class="realize-content"></div>
+
+    <script src="realize.min.js"></script>
+    <script>
+      window.onload = function(){
+        var Theme = Realize.run();
+        Theme.setMenu(false);
+        Theme.addPlugin('iframe figura video podcast flipcard flipper accordion sanfona objetiva multipla');
+        Theme.addGroup('Destaques',function(group){
+          group.addResource('Destaque Total',function(resource){
+            resource.addEditor('Destaque',function(field){
+              field.shortcode('HIGHLIGHT');
+            });
+            resource.addText('Título',function(field){
+              field.shortcode('TITLE');
+            });
+            resource.addImage('Arquivo',function(field){
+              field.shortcode('IMAGE');
+            });
+            resource.addColor('Cor de texto',function(field){
+              field.shortcode('COR');
+            });
+            resource.build('<div class="destaque-total">'+
+              '<h1>[TITLE]</h1>'+
+              '<div style="color:[COR];">[HIGHLIGHT]</div>'+
+              '<img src="[IMAGE]" />'+
+            '</div>');
+          });
+          group.addResource('Destaque Técnico',function(resource){
+            resource.addEditor('Destaque',function(field){
+              field.shortcode('HIGHLIGHT');
+            });
+            resource.build('<div class="destaque-tecnico">[HIGHLIGHT]</div>',function(result){
+              result.element.style.background = 'red';
+              result.$element.click(function(e){
+                e.preventDefault();
+                result.$element.css('background','blue');
+                console.log('value',result.value);
+                alert(JSON.stringify(result.value));
+              });
+            });
+          });
+        });
+        Theme.init();
+      };
+    </script>
+  </body>
+</html>
