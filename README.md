@@ -30,6 +30,8 @@ Biblioteca para **criação de temas** para o sistema [Realize](https://www.real
     - [Criar Resultado do Recurso](#criar-resultado-do-recurso)
   - [Invocar Funções por Eventos](#invocar-funções-por-eventos)
     - [Theme.addHook(string,function)](#addhook)
+  - [Subir Tema na Realize](#subir-tema-na-realize)
+    - [Theme.download()](#download)
 
 ## Descrição
 
@@ -616,3 +618,47 @@ Theme.addHook(string,function);
 | string | `'end'` | Invoca a função `function` do segundo argumento após o carregamento da biblioteca |
 | string | `'content'` | Invoca a função `function` do segundo argumento após o carregamento do conteúdo |
 | function | `function(){}` | Função invocada no evento informado no primeiro argumento `string` |
+
+### Subir Tema na Realize
+
+Agora que você **construiu** e **testou** o seu tema, chegou a hora de subir na [Realize](https://realize.pro.br/).
+
+Primeiro você deve se certificar de que a sua **Unidade**, **Disciplina**, **Área** ou **Projeto** estão com o tema *Themer* selecionado, conforme a imagem abaixo:
+
+![Tema Themer selecionado](https://realize.pro.br/exemplo-material-didatico/github/themer.png)
+
+Depois disso, entre no modo de personalização da sua **Unidade**, **Disciplina**, **Área** ou **Projeto**. Observe que há dois envios de arquivos obrigatórios. O primeiro, chamado *Enviar Arquivo* e o segundo chamado *Configuração*, conforme a imagem abaixo:
+
+![Envio de arquivos](https://realize.pro.br/exemplo-material-didatico/github/enviodearquivos.png)
+
+No primeiro campo *Enviar Arquivo* você deve enviar um arquivo comprimido com formato `.zip` da raiz do seu projeto. No exemplo abaixo, observe que você não pode *zipar* a `projeto`, e sim todos os arquivos presentes na raiz dessa pasta. O seu `index.html` deve estar na raiz desse arquivo comprimido, se não, o seu tema não irá funcionar.
+
+![Comprimindo arquivos na pasta raiz](https://realize.pro.br/exemplo-material-didatico/github/arquivosraiz.png)
+
+No segundo campo *Configuração* você deve enviar um arquivo com formato `.json` que é exportado pelo seu próprio tema. Para iniciar a sua exportação, após a inserção da função `Theme.init();` você deve inserir a função `Theme.download();`, conforme o exemplo abaixo. 
+
+```js
+var Theme = Realize.run();
+Theme.init();
+Theme.download();
+```
+
+Após inserir a função `Theme.download();`, você deve abrir o seu arquivo `index.html` no seu servidor local. Ao fazer isso, o seu navegador irá automaticamente baixar um arquivo chamado `configuration.json`. É esse arquivo que você deve subir no campo *Configuração*. Agora você pode comentar a função `Theme.download();` para evitar que o seu código continue fazendo download a cada carregamento da página, conforme o exemplo abaixo.
+
+```js
+var Theme = Realize.run();
+Theme.init();
+// Theme.download();
+```
+
+Com os dois arquivos inseridos você já pode ir no **Editor** da [Realize](https://realize.pro.br/), salvar o seu conteúdo, visualizar o seu tema e testar os seus recursos criados. Caso precise fazer algum ajuste no seu tema, basta subir novamente os campos *Enviar Arquivo* e *Configuração* na personalização.
+
+#### download()
+
+```js
+Theme.download();
+```
+
+| Argumento | Valor | Descrição |
+| :--- | :---: | :--- |
+| nenhum | `` | Não há argumentos |
