@@ -7,15 +7,15 @@ Biblioteca para **criação de temas** para o sistema [Realize](https://www.real
 ## Sumário
 
 - [Descrição](#descrição)
-- [Instalação](#instalação)
+- [Instalação](#instalação) - [[🎬 Vídeo Tutorial](https://www.loom.com/share/78e91232647b43a7803363cb4e392224)]
   - [Primeiros passos](#primeiros-passos)
   - [Setup Inicial](#setup-inicial)
 - [Documentação](#documentação)
-  - [Desabilitar Menu de Navegação](#desabilitar-menu-de-navegação)
+  - [Desabilitar Menu de Navegação](#desabilitar-menu-de-navegação) - [[🎬 Vídeo Tutorial](https://www.loom.com/share/fbd4fc649b354719afe9eb9f842b53ad)]
     - [Theme.setMenu(boolean)](#setmenu)
-  - [Adicionar Recursos Pré-existentes](#adicionar-recursos-pré-existentes)
+  - [Adicionar Recursos Pré-existentes](#adicionar-recursos-pré-existentes) - [[🎬 Vídeo Tutorial](https://www.loom.com/share/7fe116295ccd4d219165640dc0f21898)]
     - [Theme.addPlugin(string)](#addplugin)
-  - [Criar Novos Recursos](#criar-novos-recursos)
+  - [Criar Novos Recursos](#criar-novos-recursos) - [[🎬 Vídeo Tutorial 1/3](https://www.loom.com/share/465f7ded66d14c078439f229d480146d)] [[🎬 Vídeo Tutorial 2/3](https://www.loom.com/share/539f5de7522b4a6b827a1d921c48ee5c)] [[🎬 Vídeo Tutorial 3/3](https://www.loom.com/share/440f662c8a4945fea9003f14c1bc6de6)]
     - [Criar Grupo](#criar-grupo)
       - [Theme.addGroup(string,function)](#addgroup)
     - [Criar Recurso](#criar-recurso)
@@ -28,9 +28,9 @@ Biblioteca para **criação de temas** para o sistema [Realize](https://www.real
     - [Criar Shortcode](#criar-shortcode)
       - [field.shortcode(string)](#shortcode)
     - [Criar Resultado do Recurso](#criar-resultado-do-recurso)
-  - [Invocar Funções por Eventos](#invocar-funções-por-eventos)
+  - [Invocar Funções por Eventos](#invocar-funções-por-eventos) - [[🎬 Vídeo Tutorial](https://www.loom.com/share/b369c5a548c74d75a75eebd5a989b52c)]
     - [Theme.addHook(string,function)](#addhook)
-  - [Subir Tema na Realize](#subir-tema-na-realize)
+  - [Subir Tema na Realize](#subir-tema-na-realize) - [[🎬 Vídeo Tutorial](https://www.loom.com/share/6d82423056ff4f1895831f9f26b93c5f)]
     - [Theme.download()](#download)
 
 ## Descrição
@@ -60,6 +60,8 @@ Nós da [Realize](https://www.realize.pro.br) também podemos criar temas comple
 ## Instalação
 
 ⚠️  Essa biblioteca utiliza a linguagem *javascript* e funciona em arquivos *html*.  ⚠️
+
+🎬 Assista nosso [Vídeo Tutorial](https://www.loom.com/share/78e91232647b43a7803363cb4e392224).
 
 ### Primeiros passos
 
@@ -178,6 +180,8 @@ Após incluir esses dois elementos, é possível testar esse arquivo `index.html
 
 ### Desabilitar Menu de Navegação
 
+ 🎬 Assista nosso [Vídeo Tutorial](https://www.loom.com/share/fbd4fc649b354719afe9eb9f842b53ad).
+
 A divisão de tópicos em páginas já é padrão nessa biblioteca. Entretanto, é possível carregar todo o **conteúdo** em apenas uma página, mesmo se houver tópicos diferentes, desabilitando assim o **menu de navegação** e sua separação em items. Para isso, basta inserir a função `Theme.setMenu(false);`, conforme o código abaixo:
 
 ```js
@@ -200,6 +204,8 @@ Theme.setMenu(boolean)
 | boolean | `false` | Desabilita o menu de navegação, todos os tópicos são carregados de uma vez |
 
 ### Adicionar Recursos Pré-existentes
+
+🎬 Assista nosso [Vídeo Tutorial](https://www.loom.com/share/7fe116295ccd4d219165640dc0f21898)
 
 Na [Realize](https://www.realize.pro.br) existe a possibilidade de inserir recursos no **conteúdo**. Esses recursos são definidos por formulários em que o usuário insere informações que são convertidas em algum recurso no nosso tema. Nos exemplos abaixo é possível verificar a inserção do recurso *Sanfona* no **conteúdo** da unidade e o seu formulário, em ordem:
 
@@ -243,6 +249,11 @@ Theme.addPlugin(string)
 | string | `'iframe figura video podcast flipcard flipper accordion sanfona objetiva multipla'` | Adiciona recursos, separados por espaço, no tema |
 
 ### Criar Novos Recursos
+
+🎬 Assista nossos vídeos tutoriais, separados em 3 partes:
+- [Vídeo Tutorial 1/3](https://www.loom.com/share/465f7ded66d14c078439f229d480146d)
+- [Vídeo Tutorial 2/3](https://www.loom.com/share/539f5de7522b4a6b827a1d921c48ee5c)
+- [Vídeo Tutorial 3/3](https://www.loom.com/share/440f662c8a4945fea9003f14c1bc6de6)
 
 Na [Realize](https://www.realize.pro.br) existe a possibilidade de inserir recursos no **conteúdo**. Esses recursos são definidos por formulários em que o usuário insere informações que são convertidas em algum recurso no nosso tema. Nos exemplos abaixo é possível verificar a inserção do recurso *Sanfona* no **conteúdo** da unidade e o seu formulário, em ordem:
 
@@ -585,6 +596,8 @@ Theme.addGroup(string,function(group){
 
 ### Invocar Funções por Eventos
 
+🎬 Assista nosso [Vídeo Tutorial](https://www.loom.com/share/b369c5a548c74d75a75eebd5a989b52c)
+
 Caso você precise invocar funções a partir de eventos da biblioteca, existe a função `Theme.addHook()`. Existem dois eventos abordados nessa função:
 
 - **content**: Invocar uma função após o carregamento do conteúdo de cada página do menu. Se a função `Theme.setMenu(false);` for acionada, será invocado após carregamento do conteúdo.
@@ -620,6 +633,8 @@ Theme.addHook(string,function);
 | function | `function(){}` | Função invocada no evento informado no primeiro argumento `string` |
 
 ### Subir Tema na Realize
+
+🎬 Assista nosso [Vídeo Tutorial](https://www.loom.com/share/6d82423056ff4f1895831f9f26b93c5f).
 
 Agora que você **construiu** e **testou** o seu tema, chegou a hora de subir na [Realize](https://realize.pro.br/).
 
@@ -661,4 +676,4 @@ Theme.download();
 
 | Argumento | Valor | Descrição |
 | :--- | :---: | :--- |
-| nenhum | `` | Não há argumentos |
+| nenhum | | Não há argumentos |
