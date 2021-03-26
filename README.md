@@ -37,7 +37,7 @@ Biblioteca para **criação de temas** para o sistema [Realize](https://www.real
 
 É com muito prazer que informamos que nossa plataforma de construção de Materiais Didáticos, a [Realize](https://www.realize.pro.br), agora possui a viabilidade de **construção de temas** 👏👏👏👏. O tema é o modelo visual e interativo do material didático no qual o conteúdo bruto será construído. Veja o exemplo [clicando aqui](https://realize.pro.br/exemplo-material-didatico/).
 
-Conforme a imagem abaixo, quando os autores escrevem o conteúdo bruto no lado direito do editor, a Inteligência [Realize](https://www.realize.pro.br) constrói o material didático, contendo o tema, no lado esquerdo do editor.
+Conforme a imagem abaixo, quando os autores escrevem o conteúdo bruto no lado esquerdo do editor, a Inteligência [Realize](https://www.realize.pro.br) constrói o material didático, contendo o tema, no lado direito do editor.
 
 ![Editor da Realize](https://realize.pro.br/exemplo-material-didatico/github/editor.png)
 
